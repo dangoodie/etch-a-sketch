@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+#game-container {
+  width: 960px;
+  height: 960px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#game-container>div {
+  border: 1px solid black;
+  flex: auto;
+}
