@@ -8,7 +8,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
+  border: 1px solid black;
 }
 
 .row {
@@ -22,4 +22,12 @@
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 0;
+}
+
+.cell:hover {
+  background-color: black;
+}
+
+.black {
+  background-color: black;
 }
