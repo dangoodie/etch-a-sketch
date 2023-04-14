@@ -2,10 +2,24 @@
   box-sizing: border-box;
 }
 
-body {
+.header {
+  text-align: center;
+}
+
+
+
+
+.container {
+
+  margin-left: 20%;
+  margin-right: 20%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
 }
 
 #game-container {
