@@ -11,8 +11,11 @@ function handleMouseUp (e) {
   if(e) mouseDown = false;
 }
 
-function paint(e) {
+function paintClick(e) {
+    e.target.classList.add("black");
+}
 
+function paintHold(e) {
   if (mouseDown) {
     e.target.classList.add("black");
   }
@@ -25,7 +28,8 @@ for (let i = 0; i < 16; i++) {
   for (let i = 0; i < 16; i++) {
     const div = document.createElement("div");
     div.classList.add("cell");
-    div.addEventListener("mouseover", paint);
+    div.addEventListener("mouseover", paintHold);
+    div.addEventListener("mousedown", paintClick);
     row.appendChild(div);
   }
 }
