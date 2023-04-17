@@ -1,16 +1,9 @@
-
-
-//Track whether the mouse is currently up or down
-document.addEventListener("mousedown", handleMouseDown);
-document.addEventListener("mouseup", handleMouseUp);
 let mouseDown = false;
 
-function handleMouseDown(e) {
-  if (e) mouseDown = true;
-}
-function handleMouseUp(e) {
-  if (e) mouseDown = false;
-}
+//Track whether the mouse is currently up or down
+window.addEventListener("mousedown", () => mouseDown = true);
+window.addEventListener("mouseup", () => (mouseDown = false));
+
 
 // Callbacks for different type of clicks
 function paintClick(e) {
@@ -51,11 +44,11 @@ const gridSize = document.querySelector("#grid-size");
 gridSize.addEventListener("click", handleGridSize);
 
 function handleGridSize(e) {
-  let newGridSize = prompt("What size do you want?")
+  let newGridSize = prompt("What size do you want?");
   newGridSize = parseInt(newGridSize);
   console.log(newGridSize);
   if (newGridSize !== null || newGridSize !== NaN) {
-    size = newGridSize
+    size = newGridSize;
     buildGrid(size);
   } else {
     console.error("Not a valid input");
